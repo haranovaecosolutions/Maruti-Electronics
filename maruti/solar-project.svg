@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" role="img" aria-label="Solar project completion illustration">
+  <rect width="1200" height="1400" fill="#f7fbf7"/>
+  <rect x="150" y="200" width="900" height="980" rx="40" fill="#ffffff" stroke="#cfe4d0" stroke-width="8"/>
+  <rect x="220" y="320" width="760" height="220" rx="28" fill="#071a3a"/>
+  <path d="M340 520h520" stroke="#f9b233" stroke-width="20" stroke-linecap="round"/>
+  <path d="M470 520v260" stroke="#f9b233" stroke-width="20" stroke-linecap="round"/>
+  <path d="M600 520v260" stroke="#f9b233" stroke-width="20" stroke-linecap="round"/>
+  <path d="M730 520v260" stroke="#f9b233" stroke-width="20" stroke-linecap="round"/>
+  <path d="M480 940h240" stroke="#8fbf7f" stroke-width="20" stroke-linecap="round"/>
+  <path d="M520 860l60 60 120-140" stroke="#071a3a" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
