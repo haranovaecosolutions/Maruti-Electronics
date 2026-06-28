@@ -69,7 +69,7 @@ export default function HomePage() {
 
           <div className="hero-visual">
             <Image
-              src="/maruti/hero-ht-lt.jpg"
+              src="/maruti/hero-ht-lt.svg"
               alt="Maruti Electricals HT LT Electrical Work"
               width={760}
               height={900}
@@ -148,7 +148,7 @@ export default function HomePage() {
 
           <div className="image-stack">
             <Image
-              src="/maruti/hero-solar.jpg"
+              src="/maruti/hero-solar.svg"
               alt="Solar Installation"
               width={700}
               height={820}

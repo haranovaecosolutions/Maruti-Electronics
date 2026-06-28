@@ -84,7 +84,7 @@ export default function AboutPage() {
       <section className="section">
         <div className="container two-column">
           <Image
-            src="/maruti/profile-brochure.jpg"
+            src="/maruti/profile-brochure.svg"
             alt="Maruti Electricals Profile"
             width={760}
             height={760}

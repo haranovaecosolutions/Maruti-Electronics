@@ -278,18 +278,18 @@ export const projects = [
     title: "DG Installation",
     description:
       "DG set installation, AMF / ATS panel work, load testing and commissioning.",
-    image: "/maruti/hero-dg.jpg",
+    image: "/maruti/hero-dg.svg",
   },
   {
     title: "Solar Installation",
     description:
       "On-grid solar system and rooftop solar solutions for commercial and industrial units.",
-    image: "/maruti/hero-solar.jpg",
+    image: "/maruti/hero-solar.svg",
   },
   {
     title: "Successfully Completed Solar Installation Project",
     description:
       "Solar installation project completed at Navsari, Gujarat, India on 30/05/2026.",
-    image: "/maruti/solar-project.jpg",
+    image: "/maruti/solar-project.svg",
   },
 ];

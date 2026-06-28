@@ -679,7 +679,7 @@ img {
 .page-hero {
   background:
     linear-gradient(135deg, rgba(6, 26, 58, 0.92), rgba(6, 26, 58, 0.78)),
-    url("/maruti/hero-ht-lt.jpg") center/cover;
+    url("/maruti/hero-ht-lt.svg") center/cover;
   color: var(--white);
   padding: 116px 0;
 }
