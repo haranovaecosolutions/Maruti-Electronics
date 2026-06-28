@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" role="img" aria-label="Electrical infrastructure">
+  <rect width="1200" height="1400" fill="#f4f7fb"/>
+  <rect x="120" y="180" width="960" height="1040" rx="32" fill="#ffffff" stroke="#cfd8e3" stroke-width="8"/>
+  <rect x="220" y="300" width="760" height="180" rx="24" fill="#071a3a"/>
+  <rect x="250" y="340" width="220" height="18" rx="9" fill="#f9b233"/>
+  <rect x="250" y="380" width="180" height="18" rx="9" fill="#f9b233"/>
+  <rect x="240" y="620" width="720" height="420" rx="24" fill="#eef3f8"/>
+  <path d="M320 860h180" stroke="#071a3a" stroke-width="16" stroke-linecap="round"/>
+  <path d="M520 860h180" stroke="#071a3a" stroke-width="16" stroke-linecap="round"/>
+  <path d="M720 860h180" stroke="#071a3a" stroke-width="16" stroke-linecap="round"/>
+  <path d="M400 730v130" stroke="#071a3a" stroke-width="16" stroke-linecap="round"/>
+  <path d="M600 730v130" stroke="#071a3a" stroke-width="16" stroke-linecap="round"/>
+  <path d="M800 730v130" stroke="#071a3a" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="900" cy="420" r="110" fill="#f9b233"/>
+  <path d="M900 348v144M828 420h144" stroke="#071a3a" stroke-width="20" stroke-linecap="round"/>
+</svg>

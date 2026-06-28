@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" role="img" aria-label="DG installation illustration">
+  <rect width="1200" height="1400" fill="#f9fbfe"/>
+  <rect x="180" y="220" width="840" height="940" rx="34" fill="#ffffff" stroke="#d8e1ec" stroke-width="8"/>
+  <rect x="250" y="310" width="700" height="200" rx="24" fill="#071a3a"/>
+  <rect x="300" y="360" width="220" height="22" rx="11" fill="#f9b233"/>
+  <rect x="300" y="410" width="180" height="22" rx="11" fill="#f9b233"/>
+  <rect x="250" y="620" width="700" height="360" rx="24" fill="#eef3f8"/>
+  <path d="M360 760h260" stroke="#071a3a" stroke-width="20" stroke-linecap="round"/>
+  <path d="M640 760h200" stroke="#071a3a" stroke-width="20" stroke-linecap="round"/>
+  <path d="M460 776v140" stroke="#071a3a" stroke-width="20" stroke-linecap="round"/>
+  <path d="M740 776v140" stroke="#071a3a" stroke-width="20" stroke-linecap="round"/>
+</svg>
