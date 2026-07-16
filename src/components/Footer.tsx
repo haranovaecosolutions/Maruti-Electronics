@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, MapPin, Phone, Zap } from "lucide-react";
 import { company, services } from "@/data/site";
 
@@ -8,7 +9,13 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <div className="footer-brand">
-            <Zap />
+            <Image
+              src="/CARD_ME_.jpg.jpeg"
+              alt="Maruti Electricals Logo"
+              width={48}
+              height={48}
+              className="brand-logo"
+            />
             <span>{company.name}</span>
           </div>
           <p>{company.description}</p>
@@ -29,13 +36,28 @@ export default function Footer() {
         <div>
           <h4>Contact</h4>
           <p className="footer-contact">
-            <MapPin size={18} /> {company.address}
+            <MapPin size={18} />
+            <a
+              href="https://maps.app.goo.gl/SJxm2anuebZU42zF8"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {company.address}
+            </a>
           </p>
           <p className="footer-contact">
-            <Phone size={18} /> {company.phones.join(" / ")}
+            <Phone size={18} />
+            <span>
+              <a href={`tel:${company.phones[0]}`}>{company.phones[0]}</a>
+              {company.phones[1] ? ` / ` : ""}
+              {company.phones[1] ? (
+                <a href={`tel:${company.phones[1]}`}>{company.phones[1]}</a>
+              ) : null}
+            </span>
           </p>
           <p className="footer-contact">
-            <Mail size={18} /> {company.emails[0]}
+            <Mail size={18} />
+            <a href="mailto:marutielec@rediffmail.com">marutielec@rediffmail.com</a>
           </p>
         </div>
       </div>

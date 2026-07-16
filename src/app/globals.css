@@ -813,6 +813,42 @@ img {
   box-shadow: 0 0 0 4px rgba(217, 4, 22, 0.08);
 }
 
+.toast-message {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  font-weight: 700;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  max-width: 540px;
+}
+
+.toast-message.success {
+  background: #0d4c1d;
+  color: #f5fff7;
+}
+
+.toast-message.error {
+  background: #7d1818;
+  color: #fff4f4;
+}
+
+.form-status {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.form-status.success {
+  background: rgba(13, 76, 29, 0.15);
+  color: #0d4c1d;
+}
+
+.form-status.error {
+  background: rgba(125, 24, 24, 0.15);
+  color: #7d1818;
+}
+
 .contact-panel {
   background: var(--navy);
   color: var(--white);

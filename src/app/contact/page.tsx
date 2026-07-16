@@ -1,3 +1,6 @@
+"use client";
+
+import { FormEvent, useEffect, useState } from "react";
 import {
   Mail,
   MapPin,
@@ -9,6 +12,59 @@ import SectionHeader from "@/components/SectionHeader";
 import { company } from "@/data/site";
 
 export default function ContactPage() {
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
+  const [showToast, setShowToast] = useState(false);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setStatus("loading");
+    setMessage("");
+    setShowToast(false);
+
+    const formData = new FormData(event.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result?.message || "Failed to submit enquiry");
+      }
+
+      setStatus("success");
+      setMessage(
+        result.message
+          ? `${result.message}. If email delivery is configured, you will receive it at marutielec@rediffmail.com.`
+          : "Information submitted successfully. If email delivery is configured, you will receive it at marutielec@rediffmail.com."
+      );
+      setShowToast(true);
+      event.currentTarget.reset();
+    } catch (error) {
+      setStatus("error");
+      setMessage(error instanceof Error ? error.message : "Something went wrong");
+      setShowToast(true);
+    }
+  }
+
+  useEffect(() => {
+    if (!showToast) return;
+
+    const timer = window.setTimeout(() => {
+      setShowToast(false);
+    }, 4000);
+
+    return () => window.clearTimeout(timer);
+  }, [showToast]);
+
   return (
     <>
       <section className="page-hero">
@@ -32,12 +88,7 @@ export default function ContactPage() {
               description="Share your electrical project requirement and our team will connect with you."
             />
 
-            <form
-              className="contact-form"
-              action={`mailto:${company.emails[0]}`}
-              method="post"
-              encType="text/plain"
-            >
+            <form className="contact-form" onSubmit={handleSubmit}>
               <input name="name" placeholder="Your Name" required />
               <input name="phone" placeholder="Phone Number" required />
               <input name="email" placeholder="Email Address" type="email" />
@@ -58,10 +109,18 @@ export default function ContactPage() {
                 placeholder="Write your requirement"
                 rows={6}
               />
-              <button className="btn btn-primary" type="submit">
-                Submit Enquiry
+              <button className="btn btn-primary" type="submit" disabled={status === "loading"}>
+                {status === "loading" ? "Submitting..." : "Submit Enquiry"}
               </button>
+              {message ? (
+                <p className={`form-status ${status}`}>{message}</p>
+              ) : null}
             </form>
+            {showToast ? (
+              <div className={`toast-message ${status}`}>
+                {message}
+              </div>
+            ) : null}
           </div>
 
           <div className="contact-panel">
