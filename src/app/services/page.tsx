@@ -6,7 +6,7 @@ import { services } from "@/data/site";
 export default function ServicesPage() {
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero services-hero">
         <div className="container">
           <span className="eyebrow">Our Services</span>
           <h1>Complete Electrical Solutions Under One Roof</h1>

@@ -5,7 +5,7 @@ import { clients } from "@/data/site";
 export default function ClientsPage() {
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero clients-hero">
         <div className="container">
           <span className="eyebrow">Valuable Customers</span>
           <h1>Trusted by Reputed Industrial, Commercial and Government Clients</h1>

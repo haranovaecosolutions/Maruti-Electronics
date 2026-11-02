@@ -6,7 +6,7 @@ import { company } from "@/data/site";
 export default function AboutPage() {
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero about-hero">
         <div className="container">
           <span className="eyebrow">About Maruti Electricals</span>
           <h1>Government Approved Electrical Contractor Since 1995</h1>
@@ -84,10 +84,10 @@ export default function AboutPage() {
       <section className="section">
         <div className="container two-column">
           <Image
-            src="/maruti/profile-brochure.svg"
-            alt="Maruti Electricals Profile"
-            width={760}
-            height={760}
+            src="/page%2002.png"
+            alt="Maruti Electricals engineers inspecting a substation"
+            width={1448}
+            height={1086}
             className="rounded-image"
           />
 

@@ -69,10 +69,10 @@ export default function HomePage() {
 
           <div className="hero-visual">
             <Image
-              src="/maruti/hero-ht-lt.svg"
-              alt="Maruti Electricals HT LT Electrical Work"
-              width={760}
-              height={900}
+              src="/PAGE%2001.png"
+              alt="Maruti Electricals electrical substation project"
+              width={1254}
+              height={1254}
               priority
             />
             <div className="floating-card top">
@@ -148,10 +148,10 @@ export default function HomePage() {
 
           <div className="image-stack">
             <Image
-              src="/maruti/hero-solar.svg"
-              alt="Solar Installation"
-              width={700}
-              height={820}
+              src="/PAGE%2001-2.png"
+              alt="Maruti Electricals technician working on an electrical control panel"
+              width={1254}
+              height={1254}
             />
             <div className="image-note">
               <SunIcon />

@@ -67,7 +67,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero contact-hero">
         <div className="container">
           <span className="eyebrow">Contact Us</span>
           <h1>Get in Touch with Maruti Electricals</h1>

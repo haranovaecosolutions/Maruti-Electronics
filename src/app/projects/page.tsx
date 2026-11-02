@@ -6,7 +6,7 @@ import { projects, process } from "@/data/site";
 export default function ProjectsPage() {
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero projects-hero">
         <div className="container">
           <span className="eyebrow">Projects & Expertise</span>
           <h1>HT, LT, DG, Streetlight and Solar Project Execution</h1>

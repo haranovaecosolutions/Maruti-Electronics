@@ -266,30 +266,30 @@ export const projects = [
     title: "HT Installation",
     description:
       "HT system installation, transformers, panels, substations and switchyard work.",
-    image: "/maruti/hero-ht-lt.jpg",
+    image: "/ht.png",
   },
   {
     title: "LT Panel Work",
     description:
       "LT panels, DBs, MCCs, sub-panels, APFC panels and commissioning work.",
-    image: "/maruti/hero-ht-lt.jpg",
+    image: "/panel.png",
   },
   {
     title: "DG Installation",
     description:
       "DG set installation, AMF / ATS panel work, load testing and commissioning.",
-    image: "/maruti/hero-dg.svg",
+    image: "/DG.png",
   },
   {
     title: "Solar Installation",
     description:
       "On-grid solar system and rooftop solar solutions for commercial and industrial units.",
-    image: "/maruti/hero-solar.svg",
+    image: "/solar.png",
   },
   {
     title: "Successfully Completed Solar Installation Project",
     description:
       "Solar installation project completed at Navsari, Gujarat, India on 30/05/2026.",
-    image: "/maruti/solar-project.svg",
+    image: "/solar%20light.png",
   },
 ];
