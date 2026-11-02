@@ -48,10 +48,14 @@ export default function Footer() {
           <p className="footer-contact">
             <Phone size={18} />
             <span>
-              <a href={`tel:${company.phones[0]}`}>{company.phones[0]}</a>
+              <a href={`tel:${company.phones[0].replace(/\s/g, "")}`}>
+                {company.phones[0]}
+              </a>
               {company.phones[1] ? ` / ` : ""}
               {company.phones[1] ? (
-                <a href={`tel:${company.phones[1]}`}>{company.phones[1]}</a>
+                <a href={`tel:${company.phones[1].replace(/\s/g, "")}`}>
+                  {company.phones[1]}
+                </a>
               ) : null}
             </span>
           </p>

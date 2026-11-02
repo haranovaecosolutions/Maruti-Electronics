@@ -8,8 +8,8 @@ export const company = {
   established: "1995",
   address:
     "Shop No. 14, Karmayog HSG Soc, Near Morarji Circle, GIDC, Vapi – 396195",
-  phones: ["9377000055", "7878907279"],
-  emails: ["marutielec@rediffmail.com", "info@marutielectricals.com"],
+  phones: ["+91 9377000055", "+91 7878907279"],
+  emails: ["marutielec@rediffmail.com"],
   website: "www.marutielectricals.com",
 };
 

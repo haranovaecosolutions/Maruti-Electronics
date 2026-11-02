@@ -16,7 +16,10 @@ export default function CTA() {
         </div>
 
         <div className="cta-actions">
-          <a href={`tel:${company.phones[0]}`} className="btn btn-light">
+          <a
+            href={`tel:${company.phones[0].replace(/\s/g, "")}`}
+            className="btn btn-light"
+          >
             <PhoneCall size={18} />
             Call {company.phones[0]}
           </a>
