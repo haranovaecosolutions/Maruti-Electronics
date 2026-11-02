@@ -2,6 +2,8 @@ import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import CTA from "@/components/CTA";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function ClientsPage() {
   return (
     <>
@@ -25,14 +27,14 @@ export default function ClientsPage() {
 
           <div className="clients-image-stack">
             <Image
-              src="/client 01.png"
+              src={`${basePath}/client 01.png`}
               alt="Collection of customer logos, first image"
               width={568}
               height={438}
               sizes="(max-width: 960px) 100vw, 900px"
             />
             <Image
-              src="/client 02.png"
+              src={`${basePath}/client 02.png`}
               alt="Collection of customer logos, second image"
               width={558}
               height={740}
