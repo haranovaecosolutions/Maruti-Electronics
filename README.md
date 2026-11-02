@@ -50,6 +50,10 @@ after the mail server accepts the message.
    receives them.
 5. Submit a test enquiry and check the Vercel function logs if delivery fails.
 
+The Vercel deployment uses Next.js server routes for email. The separate
+GitHub Pages workflow builds a static export, so its deployment does not
+include the contact API and cannot send email.
+
 To create a Google App Password, enable 2-Step Verification on the sender
 Google account, then open **Google Account → Security → 2-Step Verification →
 App passwords** and create one for this app. Enter it as `SMTP_PASSWORD`

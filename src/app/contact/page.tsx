@@ -35,6 +35,13 @@ export default function ContactPage() {
         body: JSON.stringify(data),
       });
 
+      const contentType = response.headers.get("content-type");
+      if (!contentType?.includes("application/json")) {
+        throw new Error(
+          "The contact service is unavailable right now. Please try again later."
+        );
+      }
+
       const result = await response.json();
 
       if (!response.ok) {

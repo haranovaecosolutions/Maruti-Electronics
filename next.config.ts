@@ -5,7 +5,7 @@ const basePath =
   process.env.NEXT_PUBLIC_BASE_PATH ?? (isGithubPages ? "/Maruti-Electronics" : "");
 
 const nextConfig: NextConfig = {
-  output: "export",
+  ...(isGithubPages ? { output: "export" as const } : {}),
   trailingSlash: true,
   basePath,
   assetPrefix: basePath,
