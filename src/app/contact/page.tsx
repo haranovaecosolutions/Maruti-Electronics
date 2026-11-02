@@ -18,11 +18,12 @@ export default function ContactPage() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
     setStatus("loading");
     setMessage("");
     setShowToast(false);
 
-    const formData = new FormData(event.currentTarget);
+    const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
     try {
@@ -41,13 +42,9 @@ export default function ContactPage() {
       }
 
       setStatus("success");
-      setMessage(
-        result.message
-          ? `${result.message}. If email delivery is configured, you will receive it at marutielec@rediffmail.com.`
-          : "Information submitted successfully. If email delivery is configured, you will receive it at marutielec@rediffmail.com."
-      );
+      setMessage(result.message || "Your enquiry has been sent successfully.");
       setShowToast(true);
-      event.currentTarget.reset();
+      form.reset();
     } catch (error) {
       setStatus("error");
       setMessage(error instanceof Error ? error.message : "Something went wrong");
@@ -89,9 +86,9 @@ export default function ContactPage() {
             />
 
             <form className="contact-form" onSubmit={handleSubmit}>
-              <input name="name" placeholder="Your Name" required />
-              <input name="phone" placeholder="Phone Number" required />
-              <input name="email" placeholder="Email Address" type="email" />
+              <input name="name" placeholder="Your Name" maxLength={120} required />
+              <input name="phone" placeholder="Phone Number" maxLength={40} required />
+              <input name="email" placeholder="Email Address" type="email" maxLength={254} required />
               <select name="service" defaultValue="">
                 <option value="" disabled>
                   Select Service
@@ -108,6 +105,8 @@ export default function ContactPage() {
                 name="message"
                 placeholder="Write your requirement"
                 rows={6}
+                maxLength={5000}
+                required
               />
               <button className="btn btn-primary" type="submit" disabled={status === "loading"}>
                 {status === "loading" ? "Submitting..." : "Submit Enquiry"}
