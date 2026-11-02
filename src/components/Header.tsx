@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, Phone, X } from "lucide-react";
 import { company } from "@/data/site";
 
@@ -17,6 +18,12 @@ const nav = [
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const normalizedPathname = pathname.replace(/\/+$/, "") || "/";
+  const isActiveLink = (href: string) => {
+    const normalizedHref = href.replace(/\/+$/, "") || "/";
+    return normalizedPathname === normalizedHref;
+  };
 
   return (
     <header className="site-header">
@@ -39,7 +46,11 @@ export default function Header() {
 
         <nav className="nav desktop-nav" aria-label="Main navigation">
           {nav.map((item) => (
-            <Link key={item.href} href={item.href}>
+            <Link
+              key={item.href}
+              href={item.href}
+              aria-current={isActiveLink(item.href) ? "page" : undefined}
+            >
               {item.label}
             </Link>
           ))}
@@ -76,6 +87,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={isActiveLink(item.href) ? "page" : undefined}
               onClick={() => setIsMenuOpen(false)}
             >
               {item.label}
