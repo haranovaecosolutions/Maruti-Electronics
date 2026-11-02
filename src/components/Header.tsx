@@ -30,7 +30,7 @@ export default function Header() {
       <div className="container header-inner">
         <Link href="/" className="brand">
           <Image
-            src="/CARD_ME_.jpg.jpeg"
+            src="/main_logo.png"
             alt="Maruti Electricals Logo"
             width={72}
             height={72}

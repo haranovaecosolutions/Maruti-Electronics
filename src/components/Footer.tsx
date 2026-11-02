@@ -10,7 +10,7 @@ export default function Footer() {
         <div>
           <div className="footer-brand">
             <Image
-              src="/CARD_ME_.jpg.jpeg"
+              src="/main_logo.png"
               alt="Maruti Electricals Logo"
               width={48}
               height={48}
