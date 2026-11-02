@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { Phone } from "lucide-react";
+import { useState } from "react";
+import { Menu, Phone, X } from "lucide-react";
 import { company } from "@/data/site";
 
 const nav = [
@@ -13,6 +16,8 @@ const nav = [
 ];
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="site-header">
       <div className="container header-inner">
@@ -32,7 +37,7 @@ export default function Header() {
           </div>
         </Link>
 
-        <nav className="nav">
+        <nav className="nav desktop-nav" aria-label="Main navigation">
           {nav.map((item) => (
             <Link key={item.href} href={item.href}>
               {item.label}
@@ -40,11 +45,44 @@ export default function Header() {
           ))}
         </nav>
 
-        <a className="header-call" href={`tel:${company.phones[0]}`}>
+        <a
+          className="header-call"
+          href={`tel:${company.phones[0].replace(/\s/g, "")}`}
+          aria-label={`Call ${company.phones[0]}`}
+        >
           <Phone size={18} />
           {company.phones[0]}
         </a>
+
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-navigation"
+          onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
+
+      {isMenuOpen && (
+        <nav
+          className="mobile-nav"
+          id="mobile-navigation"
+          aria-label="Mobile navigation"
+        >
+          {nav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+      )}
     </header>
   );
 }
