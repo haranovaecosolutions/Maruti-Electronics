@@ -598,15 +598,13 @@ textarea {
   font-size: 15px;
 }
 
-.client-marquee,
-.clients-grid {
+.client-marquee {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
 }
 
-.client-marquee span,
-.client-card {
+.client-marquee span {
   padding: 18px;
   background: var(--white);
   border: 1px solid var(--border);
@@ -615,6 +613,23 @@ textarea {
   color: var(--navy);
   font-weight: 900;
   box-shadow: 0 10px 28px rgba(6, 26, 58, 0.05);
+}
+
+.clients-image-stack {
+  display: flex;
+  max-width: 900px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin: 0 auto;
+}
+
+.clients-image-stack img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(6, 26, 58, 0.08);
 }
 
 .cta {
@@ -1011,7 +1026,6 @@ textarea {
 
   .service-grid,
   .mission-grid,
-  .clients-grid,
   .client-marquee,
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1106,7 +1120,6 @@ textarea {
   .highlight-grid,
   .service-grid,
   .mission-grid,
-  .clients-grid,
   .client-marquee,
   .project-grid,
   .process-grid,
